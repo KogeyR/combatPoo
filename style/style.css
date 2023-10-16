@@ -1,0 +1,298 @@
+body {
+    margin: 0;
+    background-color: #303030;
+    text-align: center;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+h2{
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#create{
+text-align: center;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 100%; 
+    z-index: -1;
+    object-fit: cover; 
+}
+  
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .character-list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+}
+
+#name {
+    border: solid 1px #ff5722;
+    border-radius: 25px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+
+
+.form {
+    display: inline;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    flex: 1;
+}
+
+button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-create {
+    border-radius: 15px;
+}
+
+
+.character-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+    padding: 0;
+}
+
+
+#vegeta {
+    width: 300px;
+}
+
+.container .cardCP {
+    position: relative;
+    width: 320px;
+    height: 375px;
+    background: #494b47;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+
+.btnCP{
+    display: flex;
+    padding: 5px;
+}
+
+.container .cardCP:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffb700;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+
+}
+
+.container .cardCP:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.container .cardCP:after {
+    position: absolute;
+    left: -20%;
+    font-size: 8em;
+    font-weight: 1000;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.06);
+
+}
+
+.container .cardCP .imgBx {
+    position: absolute;
+    bottom: 20%;
+    /* z-index: 10000; */
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.container .cardCP:hover .imgBx {
+    height: 220px;
+    transition: 0.5;
+    bottom: 35%;
+}
+
+.container .cardCP .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition-timing-function: 1s;
+    z-index: 10;
+}
+
+.container .cardCP:hover .contentBx {
+    height: 210px;
+    transition: 0.5s;
+}
+
+.container .cardCP .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1;
+    color: #fff;
+    transition: 0.5s;
+    text-shadow: 1px 1px 5px #000;
+
+}
+
+.container .cardCP .contentBx .size,
+.container .cardCP .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.container .cardCP:hover .contentBx .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+    
+}.container .cardCP:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.7s;
+    
+}
+
+.container .cardCP .contentBx .size h3,
+.container .cardCP .contentBx .color h3 {
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    transition: 0.5s;
+    text-shadow: 1px 1px 5px #000;
+
+
+
+}
+
+.container .cardCP .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #111;
+    cursor: pointer;
+
+}
+
+.container .cardCP .contentBx .size span:hover {
+    background: #ffa800;
+}
+
+.container .cardCP .contentBx .color span {
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.container .cardCP .contentBx .color span:nth-child(2) {
+    background: #0033cc;
+}
+
+.container .cardCP .contentBx .color span:nth-child(3) {
+    background: #ffa800;
+}
+
+.container .cardCP .contentBx .color span:nth-child(4) {
+    background: #7d4021;
+}
+
+.container .cardCP .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+
+.container .cardCP:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.9s;
+}
